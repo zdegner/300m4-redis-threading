@@ -1,0 +1,10 @@
+micronaut:
+  application:
+    name: 300m4RedisThreading
+
+
+redis:
+  uri: redis://localhost
+  caches:
+    sample-cache:
+      expire-after-write: 5m

@@ -2,13 +2,13 @@ package com.example;
 
 import io.micronaut.cache.annotation.Cacheable;
 import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
+import io.micronaut.http.annotation.Post;
 import io.micronaut.http.context.ServerRequestContext;
 import reactor.core.publisher.Mono;
 
 @Controller
 public class MyController {
-    @Get("sample")
+    @Post("sample")
     public Mono<String> sample() {
         return getFromCache()
                 .map((cachedValue) -> {

@@ -14,6 +14,7 @@ class MyControllerTest {
     @Test
     void testSampleEndpoint(){
         String threadName = client.sample();
-        Assertions.assertEquals("", threadName);
+        System.out.println(threadName);
+        Assertions.assertTrue(threadName.contains("request is present"));
     }
 }
